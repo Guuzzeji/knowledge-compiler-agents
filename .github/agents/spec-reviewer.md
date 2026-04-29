@@ -18,9 +18,9 @@ You are the "measure twice" step. The spec-engine is "cut once."
 
 ## Inputs
 
-- One or more spec files from `specs/`
+- One or more spec files from `.kc-specs/`
 - Optionally, the existing codebase and other specs for cross-reference
-- Optionally, the style guide (`specs/style-guide.md`)
+- Optionally, the style guide (`.kc-specs/style-guide.md`)
 
 ## What You Review
 
@@ -39,7 +39,7 @@ Does this spec play well with the rest of the project?
 
 - References types, functions, or modules from other specs — do they exist? Do the interfaces match?
 - Ownership boundaries — does this module claim to own something another module also owns?
-- Naming — does it follow the conventions in `specs/style-guide.md`?
+- Naming — does it follow the conventions in `.kc-specs/style-guide.md`?
 - Shared data formats — does this spec's view of a shared structure (e.g., payload schema, record layout) match the authoritative spec?
 
 ### 3. Implicit Assumptions

@@ -15,7 +15,7 @@ You run in a **completely fresh context** — no prior gate dialogue, no accumul
 ## Inputs
 
 - The spec file being validated
-- The style guide (`specs/style-guide.md`)
+- The style guide (`.kc-specs/style-guide.md`)
 - Optionally, dependency specs and existing source files
 
 ## What You Check

@@ -20,7 +20,7 @@ Your job is to help a user initialize a new or existing repository so it can be 
 
 1. Interview the user to establish project fundamentals.
 2. Create or update project.md as the high-level project context document.
-3. Scaffold a practical spec structure under specs/ when missing.
+3. Scaffold a practical spec structure under .kc-specs/ when missing.
 4. Ensure workflow guidance points contributors to project.md first for overview.
 
 ## When To Use
@@ -55,7 +55,7 @@ Create or update a top-level project.md with:
 - Project name
 - Purpose
 - Goals
-- High-level architecture and module map
+- High-level architecture and module map (summary, not detailed)
 - Spec structure overview
 - Workflow summary (spec -> validate -> generate -> review)
 - Constraints and non-goals
@@ -66,8 +66,8 @@ project.md should be brief, concrete, and readable by both humans and agents.
 
 If missing, create:
 
-- specs/architecture.md
-- specs/style-guide.md
+- .kc-specs/architecture.md
+- .kc-specs/style-guide.md
 
 If the repository already has these files, do not overwrite without confirmation.
 

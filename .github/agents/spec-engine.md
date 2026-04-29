@@ -13,8 +13,8 @@ Read the full agent definition in `AGENT.md` at the repo root — it contains th
 
 ## Inputs
 
-- A spec file (markdown, prose-first) from `specs/`
-- The style guide (`specs/style-guide.md`) defining coding conventions
+- A spec file (markdown, prose-first) from `.kc-specs/`
+- The style guide (`.kc-specs/style-guide.md`) defining coding conventions
 - The current codebase in source directories (for context on existing modules)
 
 ## Pipeline
@@ -81,10 +81,10 @@ After all gates pass, delegate to the **spec-reviewer agent** for a holistic cri
 
 This is your core responsibility. You are a **literal translator** from spec to code.
 
-1. Read `specs/style-guide.md`
+1. Read `.kc-specs/style-guide.md`
 2. Read dependency interface definitions needed for compatibility (for example: public types, API contracts, schema definitions, shared protocol docs)
 3. Generate **only** the files declared in the spec's Output Files section
-4. Include a generated provenance header in the target file's native comment format (for example: `Generated from: specs/<path>.md`)
+4. Include a generated provenance header in the target file's native comment format (for example: `Generated from: .kc-specs/<path>.md`)
 5. Follow the style guide exactly
 
 #### The Clean Room Rule
@@ -143,10 +143,10 @@ Gate results are cached per-spec in `.github/gate-cache/<module>.json`. Before r
 
 ```json
 {
-  "spec": "specs/input/input.md",
+  "spec": ".kc-specs/input/input.md",
   "hash": "<sha256 of spec file contents>",
   "dep_hashes": {
-    "specs/other/dep.md": "<sha256>"
+    ".kc-specs/other/dep.md": "<sha256>"
   },
   "gates": {
     "lint": "pass",

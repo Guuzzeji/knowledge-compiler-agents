@@ -4,10 +4,10 @@ When working with specs in this repo, follow these conventions.
 
 ## Spec Location
 
-All specs live in `specs/`. The directory structure mirrors the module structure:
+All specs live in `.kc-specs/`. The directory structure mirrors the module structure:
 
 ```
-specs/
+.kc-specs/
   architecture.md
   style-guide.md
   <domain>/

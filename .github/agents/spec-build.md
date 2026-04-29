@@ -55,7 +55,7 @@ If the build fails, classify each error:
 For errors caused by code generation issues:
 
 - Fix the generated source files in generated code locations
-- Preserve the generated provenance header/comment if present (for example: `Generated from: specs/<path>.md`)
+- Preserve the generated provenance header/comment if present (for example: `Generated from: .kc-.kc-specs/<path>.md`)
 - Add a `build-fix: <brief reason>` comment using the file's native comment style on any line you change
 - Re-run the build to verify the fix
 
@@ -89,7 +89,7 @@ If the spec says one thing and the code doesn't compile, the code is wrong. If t
 - **Mark all fixes** with `build-fix:` comments (using the file's native comment syntax) so the human can audit what you changed.
 - **Re-run the build** after every fix to confirm it actually resolved the error.
 - **Report spec gaps honestly.** Don't hack around a missing spec with invented behavior.
-- **Respect the style guide.** Fixes must follow `specs/style-guide.md` conventions.
+- **Respect the style guide.** Fixes must follow `.kc-specs/style-guide.md` conventions.
 
 ## Anti-Patterns
 

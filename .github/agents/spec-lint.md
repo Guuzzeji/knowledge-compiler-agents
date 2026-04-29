@@ -17,10 +17,10 @@ You are **Gate 0** — the smoke test before the real exam.
 
 ## Inputs
 
-- One spec file from `specs/`
+- One spec file from `.kc-specs/`
 - The spec format definition from `.github/instructions/spec-format.instructions.md`
 - The list of all spec files in the project (for cross-reference checks)
-- Optionally, the style guide (`specs/style-guide.md`) for naming checks
+- Optionally, the style guide (`.kc-specs/style-guide.md`) for naming checks
 
 ## Checks (in order)
 
@@ -50,19 +50,19 @@ This is a heuristic, not a judgment call. The full gates handle real depth analy
 For each dependency listed:
 
 - Does the referenced spec file exist on disk? → blocker if not
-- Is the path relative to `specs/`? → warning if absolute or malformed
+- Is the path relative to `.kc-specs/`? → warning if absolute or malformed
 
 ### 4. Output File Paths
 
 For each output file:
 
 - Does the path follow the project's source/output layout conventions? → warning if it clearly does not
-- Does the directory structure reasonably match the spec's module location? (e.g., `specs/module/name.md` mapping to a corresponding module directory in outputs) → warning if mismatch
+- Does the directory structure reasonably match the spec's module location? (e.g., `.kc-specs/module/name.md` mapping to a corresponding module directory in outputs) → warning if mismatch
 - Do any other specs in the project declare the same output file? → blocker if conflict
 
 ### 5. Cross-Spec Output Conflicts
 
-Scan all other `specs/**/*.md` files for their `## Output Files` sections. Flag if this spec declares an output file that another spec also claims.
+Scan all other `.kc-specs/**/*.md` files for their `## Output Files` sections. Flag if this spec declares an output file that another spec also claims.
 
 ### 6. Ownership Check
 
@@ -78,7 +78,7 @@ Look for `<!-- agent-verified -->` or `<!-- tradeoff-acknowledged -->` markers:
 
 ### 8. Style Guide Naming (if style guide provided)
 
-Quick pattern checks against `specs/style-guide.md`:
+Quick pattern checks against `.kc-specs/style-guide.md`:
 
 - Function names mentioned in the spec follow the naming convention
 - Type/entity names follow the naming convention
@@ -93,7 +93,7 @@ This is best-effort — you catch obvious violations, not subtle ones.
 
 ### 🔴 Blockers (N)
 - [MISSING_SECTION] No `## Output Files` section found
-- [BROKEN_DEP] Dependency `specs/audio/audio.md` does not exist
+- [BROKEN_DEP] Dependency `.kc-specs/audio/audio.md` does not exist
 
 ### 🟡 Warnings (N)
 - [SHALLOW] `## Purpose` section is only 1 sentence

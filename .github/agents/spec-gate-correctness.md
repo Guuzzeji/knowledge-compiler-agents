@@ -13,7 +13,7 @@ You run in a fresh context with no prior gate dialogue. You see only the spec an
 ## Inputs
 
 - The spec file being validated
-- The style guide (`specs/style-guide.md`)
+- The style guide (`.kc-specs/style-guide.md`)
 - Optionally, dependency specs referenced by this spec
 - Optionally, existing source files in `src/` for interface verification
 

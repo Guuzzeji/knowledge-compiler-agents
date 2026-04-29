@@ -9,15 +9,15 @@ Always treat specs as the source of truth. Implementation code is a derived arti
 Before making decisions, read files in this order:
 
 1. project.md for project purpose, goals, and high-level structure.
-2. specs/architecture.md for system boundaries and module map.
-3. specs/style-guide.md for coding rules and naming conventions.
-4. Relevant specs under specs/ for feature-level behavior.
+2. .kc-specs/architecture.md for system boundaries and module map.
+3. .kc-specs/style-guide.md for coding rules and naming conventions.
+4. Relevant specs under .kc-specs/ for feature-level behavior.
 
 ## Standard Workflow
 
 Use this pipeline for all feature work:
 
-1. Spec: Author or update prose specs in specs/.
+1. Spec: Author or update prose specs in .kc-specs/.
 2. Validate: Run the gate flow (lint, correctness, completeness, tradeoffs, depth).
 3. Generate: Produce code only from validated specs.
 4. Review: Inspect generated code and run build verification.
@@ -48,7 +48,7 @@ Gate 4 should run after Gates 1-2 are resolved.
 - Do not generate code from unvalidated specs.
 - Do not add behavior not described in specs.
 - Prefer TODO(spec) comments for missing requirements instead of assumptions.
-- Keep docs and generated output aligned with specs/style-guide.md.
+- Keep docs and generated output aligned with .kc-specs/style-guide.md.
 
 ## Canonical Context File
 

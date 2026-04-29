@@ -20,11 +20,11 @@ The goal is to make specs the source of truth, keep implementation behavior alig
 
 ## Spec Structure
 
-The canonical specification layout is under specs/:
+The canonical specification layout is under .kc-specs/:
 
-- specs/architecture.md: system architecture, module map, and boundaries.
-- specs/style-guide.md: coding conventions and implementation constraints.
-- specs/<domain>/<component>.md: module-level behavior, ownership, and output files.
+- .kc-specs/architecture.md: system architecture, module map, and boundaries.
+- .kc-specs/style-guide.md: coding conventions and implementation constraints.
+- .kc-specs/<domain>/<component>.md: module-level behavior, ownership, and output files.
 
 Each spec should follow the repo spec format instructions and include at least:
 
@@ -38,7 +38,7 @@ Each spec should follow the repo spec format instructions and include at least:
 
 The standard development workflow is:
 
-1. Author or update specs in specs/.
+1. Author or update specs in .kc-specs/.
 2. Run validation gates (lint, correctness, completeness, tradeoffs, depth).
 3. Generate code only from validated specs.
 4. Review generated code and run build verification.

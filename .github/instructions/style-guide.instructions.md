@@ -7,7 +7,7 @@ When creating or updating a style guide in this repo, follow these conventions.
 Use one canonical file path for the project style guide:
 
 - Preferred: `style-guide.md`
-- Alternate (spec-driven repos): `specs/style-guide.md`
+- Alternate (spec-driven repos): `.kc-specs/style-guide.md`
 
 If both exist, document which one is authoritative and keep rules synchronized.
 

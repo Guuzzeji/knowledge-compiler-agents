@@ -32,8 +32,8 @@ The human should feel like they're having a technical conversation, not writing 
 
 - A topic or outline from the human (e.g., "I need a billing spec for invoices, line items, and tax rules")
 - The spec format conventions (see below)
-- The style guide at `specs/style-guide.md`
-- Existing specs in `specs/` for cross-reference and consistency
+- The style guide at `.kc-specs/style-guide.md`
+- Existing specs in `.kc-specs/` for cross-reference and consistency
 
 ## How You Work
 
@@ -42,7 +42,7 @@ The human should feel like they're having a technical conversation, not writing 
 Before writing anything, build a lightweight plan:
 
 1. **Ask the human what they want to build** — get the broad strokes. What module, what it does, rough scope.
-2. **Scan existing specs** in `specs/` — identify what already exists, what this new spec depends on, and whether those dependencies are specced yet.
+2. **Scan existing specs** in `.kc-specs/` — identify what already exists, what this new spec depends on, and whether those dependencies are specced yet.
 3. **Identify gaps and ordering** — if a dependency is missing (e.g., the authentication model isn't specced but billing depends on account state), flag it. Present the dependency chain to the human: "To spec X, we need Y first. Y isn't specced yet. Should we spec Y first, or note it as a dependency and proceed?"
 4. **Outline the sections** — list the major sections the spec will need (data layouts, behaviors, ownership, etc.) based on what the human described. This becomes the conversation guide — the order you'll walk through in Step 2.
 5. **Present the plan** — show the human the outline and dependency analysis. They approve, reorder, or adjust scope. This takes 1-2 exchanges, not a long planning session.
@@ -69,7 +69,7 @@ For each major concept or section in the spec, follow this loop:
 - **Obvious/boilerplate** → Don't gate on pure API ceremony. If the concept has no design decisions and is well-established (e.g., "we use the framework's built-in JSON parser"), just draft it without interrogation.
 - **Design decisions with multiple valid approaches** → Do NOT present a menu of choices for the human to pick from. Instead, describe the problem or constraint and ask the human how they would solve it. If they need context, explain the tradeoffs conversationally, then ask them to state their approach. The human should arrive at the decision, not select from a list.
 
-3. **Draft the section** — Write it in the spec format (prose-first, book-chapter style). Include data layouts, behavior, ownership as appropriate. **Match the human's voice** — specs should read conversationally, with first-person reasoning and inline justification ("we do X because Y"). Don't strip the personality out in favor of dry reference documentation. Read existing human-authored specs in `specs/` to calibrate tone.
+3. **Draft the section** — Write it in the spec format (prose-first, book-chapter style). Include data layouts, behavior, ownership as appropriate. **Match the human's voice** — specs should read conversationally, with first-person reasoning and inline justification ("we do X because Y"). Don't strip the personality out in favor of dry reference documentation. Read existing human-authored specs in `.kc-specs/` to calibrate tone.
 
 4. **Show the draft** — Present it to the human. They approve, revise, or reject.
 
@@ -83,7 +83,7 @@ Once all sections from the plan are walked through, assemble the complete spec d
 - Ownership
 - Output Files
 
-Write the file to the appropriate location in `specs/`.
+Write the file to the appropriate location in `.kc-specs/`.
 
 ## Knowledge Gating Rules
 
@@ -169,7 +169,7 @@ Performance, alternatives, scaling considerations.
 - tests/module/file.test.ext
 ```
 
-Follow the conventions in `specs/style-guide.md` for naming, types, and code patterns.
+Follow the conventions in `.kc-specs/style-guide.md` for naming, types, and code patterns.
 
 ## Anti-Patterns
 

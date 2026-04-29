@@ -13,7 +13,7 @@ You run in a fresh context. You are advisory — you flag, you don't block.
 ## Inputs
 
 - The spec file being validated
-- The style guide (`specs/style-guide.md`)
+- The style guide (`.kc-specs/style-guide.md`)
 - Optionally, dependency specs and existing source files for context
 
 ## What You Check
