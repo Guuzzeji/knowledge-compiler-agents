@@ -1,0 +1,23 @@
+{
+  "name": "knowledge-compiler-agents-marketplace",
+  "metadata": {
+    "description": "A collection of agents that are heavily focused on spec first design and development.",
+    "version": "0.0.1"
+  },
+  "owner": {
+    "name": "Guuzzeji",
+    "email": "gabe.business.code@outlook.com"
+  },
+  "plugins": [
+    {
+      "name": "kc-agents",
+      "source": "./plugin",
+      "description": "Knowledge Compiler Agents plugin for GitHub Copilot.",
+      "version": "0.0.1",
+      "author": {
+        "name": "Guuzzeji",
+        "email": "gabe.business.code@outlook.com"
+      }
+    }
+  ]
+}
