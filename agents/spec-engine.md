@@ -139,24 +139,27 @@ All verified sections are marked `<!-- agent-verified -->` and skipped on subseq
 
 ## Gate Cache
 
-Gate results are cached per-spec in `.github/gate-cache/<module>.json`. Before running gates, check the cache:
+Gate results are cached per-spec in `.kc-specs/gate-cache/<module>.md`. Before running gates, check the cache:
 
-```json
-{
-  "spec": ".kc-specs/input/input.md",
-  "hash": "<sha256 of spec file contents>",
-  "dep_hashes": {
-    ".kc-specs/other/dep.md": "<sha256>"
-  },
-  "gates": {
-    "lint": "pass",
-    "correctness": "pass",
-    "completeness": "pass",
-    "tradeoffs": "advisory",
-    "depth": "pass",
-    "reviewer": "pass"
-  }
-}
+```
+# Gate for <input spec file name>
+
+spec: ".kc-specs/input/input.md"
+
+hash: "<sha256 of spec file contents>"
+
+dependency files and their hashes:
+
+- ".kc-specs/other/dep1.md" : "<sha256 of dep1 contents>"
+- ".kc-specs/other/dep2.md" : "<sha256 of dep2 contents>"
+
+gates:
+  - lint: "pass"
+  - correctness: "pass"
+  - completeness: "pass"
+  - tradeoffs: "advisory"
+  - depth: "pass"
+  - reviewer: "pass"
 ```
 
 ### Cache invalidation rules:
