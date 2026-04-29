@@ -11,7 +11,7 @@
   "plugins": [
     {
       "name": "kc-agents",
-      "source": "./",
+      "source": "./plugin",
       "description": "Knowledge Compiler Agents plugin for GitHub Copilot.",
       "version": "0.0.1",
       "author": {
