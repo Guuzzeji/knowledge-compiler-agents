@@ -10,7 +10,7 @@ All specs live in `specs/`. The directory structure mirrors the module structure
 specs/
   architecture.md
   style-guide.md
-  <module>/
+  <domain>/
     <component>.md
 ```
 
@@ -22,41 +22,50 @@ Each spec reads like a book chapter. The general structure is:
 # Module Name
 
 ## Purpose
+
 What this module does and why it exists.
 
 ## Dependencies
+
 Which other modules/specs this depends on.
 
-## Data Layout
-Struct definitions, sizes, alignments.
-Can be C-style or prose — both are valid.
+## Data Model
+
+Core entities, fields, constraints, and relationships.
+Use Mermaid diagrams, structured tables, or prose as appropriate.
 
 ## Behavior
-Pseudocode or prose for each function.
+
+Pseudocode or prose for major workflows, APIs, or operations.
 Precise enough to be unambiguous.
-Loose enough to not be literal C code.
+Implementation-language details are optional unless required.
 
 ## Ownership
-Who owns resources created by this module.
-When they are released. Dependency ordering.
+
+Who is responsible for resources, state, and lifecycle boundaries.
+When resources are created, transferred, and released.
 
 ## Error Handling
+
 What happens when things go wrong.
 
 ## Tradeoffs
+
 Performance, alternatives, scaling considerations.
 
 ## Output Files
-- src/module/file.h
-- src/module/file.c
+
+- src/domain/component.ext
+- tests/domain/component.test.ext
 ```
 
 ## Style
 
 - **Prose-first**: Write like a book chapter, not a pseudocode listing
 - **Document the obvious**: Even trivial operations should be spelled out
-- **Declare ownership**: Every resource must have a clear owner and release strategy
+- **Declare ownership**: Every resource or stateful boundary must have a clear owner and lifecycle strategy
 - **Consider tradeoffs**: What happens at 10x or 100x scale?
+- **Diagrams**: Use Mermaid syntax only for all diagrams
 
 ## Markers
 
