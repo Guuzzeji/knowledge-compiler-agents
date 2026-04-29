@@ -1,5 +1,5 @@
 {
-  "name": "knowledge-compiler-agents",
+  "name": "knowledge-compiler-agents-marketplace",
   "metadata": {
     "description": "A collection of agents that are heavily focused on spec first design and development.",
     "version": "0.0.1"
@@ -10,7 +10,7 @@
   },
   "plugins": [
     {
-      "name": "knowledge-compiler-agents",
+      "name": "kc-agents",
       "source": "./",
       "description": "Knowledge Compiler Agents plugin for GitHub Copilot.",
       "version": "0.0.1",
